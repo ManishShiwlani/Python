@@ -269,17 +269,17 @@ class CeilingFan:
     def medium(self):
         "turns the ceiling fan on to medium"
         self._speed = self.MEDIUM
-        print self._location + " ceiling fan is on medium"
+        print(self._location + " ceiling fan is on medium")
 
     def low(self):
         "turns the ceiling fan on to low"
         self._speed = self.LOW
-        print self._location + " ceiling fan is on low"
+        print(self._location + " ceiling fan is on low")
 
     def off(self):
         "turns the ceiling fan off"
         self._speed = self.OFF
-        print self._location + " ceiling fan is off"
+        print(self._location + " ceiling fan is off")
 
     def get_speed(self):
         return self._speed()
@@ -299,21 +299,21 @@ class Hottub:
 
     def circulate(self):
         if self._on:
-            print "Hottub is bubbling!"
+            print("Hottub is bubbling!")
 
     def jets_on(self):
         if self._on:
-            print "Hottub jets are on" 
+            print("Hottub jets are on" )
 
     def jets_off(self):
         if self._on:
-            print "Hottub jets are off" 
+            print("Hottub jets are off")
 
     def set_temperature(self, temperature):
         if temperature > self._temperature:
-            print "Hottub is heating to a steaming " + str(temperature) + " degrees"
+            print("Hottub is heating to a steaming " + str(temperature) + " degrees")
         else:
-            print "Hottub is cooling to " + str(temperature) + " degrees"
+            print("Hottub is cooling to " + str(temperature) + " degrees")
         self._temperature = temperature
 
 
@@ -325,18 +325,18 @@ class Light:
 
     def on(self):
         self._level = 100
-        print "Light is on"
+        print("Light is on")
 
     def off(self):
         self._level = 0
-        print "Light is off"
+        print("Light is off")
 
     def dim(self, level):
         self._level = level
         if self._level == 0:
             self.off()
         else:
-            print "Light is dimmed to " + self._level + "%"
+            print("Light is dimmed to " + self._level + "%")
 
     def get_level(self):
         return self._level
@@ -348,24 +348,24 @@ class Stereo:
         self._location = location
 
     def on(self):
-        print self._location + " stereo is on"
+        print(self._location + " stereo is on")
 
     def off(self):
-        print self._location + " stereo is off"
+        print(self._location + " stereo is off")
 
     def set_cd(self):
-        print self._location + " stereo is set for CD input"
+        print(self._location + " stereo is set for CD input")
 
     def set_dvd(self):
-        print self._location + " stereo is set for DVD input"
+        print(self._location + " stereo is set for DVD input")
 
     def set_radio(self):
-        print self._location + " stereo is set for Radio"
+        print(self._location + " stereo is set for Radio")
 
     def set_volume(self, volume):
         """ code to set the volume
         valid range: 1-11 (after all 11 is better than 10, right?)"""
-        print self._location + " Stereo volume set to " + volume
+        print(self._location + " Stereo volume set to " + volume)
 
 
 class TV:
@@ -375,14 +375,14 @@ class TV:
         self._channel = None
 
     def on(self):
-        print self._location + " TV is on"
+        print(self._location + " TV is on")
 
     def off(self):
-        print self._location + " TV is off"
+        print(self._location + " TV is off")
 
     def set_input_channel(self):
         self._channel = 3
-        print self._location + " TV channel is set for DVD"
+        print(self._location + " TV channel is set for DVD")
 
 
 ###############################################################################
@@ -446,8 +446,8 @@ if __name__ == '__main__':
 
     remote_control.set_command(0, party_on_macro, party_off_macro)
 
-    print remote_control
-    print "--- Pushing Macro On---"  
+    print(remote_control)
+    print("--- Pushing Macro On---")
     remote_control.on_button_was_pushed(0)
-    print "--- Pushing Macro Off---" 
+    print("--- Pushing Macro Off---")
     remote_control.off_button_was_pushed(0)

@@ -4,7 +4,6 @@ def findLadders(beginWord: str, endWord, wordList):
     s = set(wordList)
     if endWord not in s:
         return []
-
     forward, backward = {beginWord}, {endWord}  # set([beginWord]), set([endWord])
     direc, parents = 1, defaultdict(set)
 

@@ -22,10 +22,10 @@ class Duck:
 
 class MallardDuck(Duck):
     def quack(self):
-        print "Quack"
+        print("Quack")
 
     def fly(self):
-        print "I'm flying"
+        print("I'm flying")
 
 
 class Turkey:
@@ -44,10 +44,10 @@ class WildTurkey(Turkey):
     __metaclass__ = ABCMeta
 
     def gobble(self):
-        print "Gobble gobble"
+        print("Gobble gobble")
 
     def fly(self):
-        print "I'm flying a short distance"
+        print("I'm flying a short distance")
 
 
 class TurkeyAdapter(Duck):
@@ -82,7 +82,7 @@ def turkey_test_drive():
     duckAdapter = DuckAdapter(duck)
 
     for i in range(10):
-        print "The DuckAdapter says..."
+        print("The DuckAdapter says...")
         duckAdapter.gobble()
         duckAdapter.fly()
 
@@ -97,14 +97,14 @@ def duck_test_drive():
     turkey = WildTurkey()
     turkeyAdapter = TurkeyAdapter(turkey)
 
-    print "The Turkey says..."
+    print("The Turkey says...")
     turkey.gobble()
     turkey.fly()
 
-    print "\nThe Duck says..."
+    print("\nThe Duck says...")
     test_duck(duck)
 
-    print "\nThe TurkeyAdapter says..."
+    print("\nThe TurkeyAdapter says...")
     test_duck(turkeyAdapter)
 
 

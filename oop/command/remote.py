@@ -25,22 +25,22 @@ class CeilingFan:
     def high(self):
         "turns the ceiling fan on to high"
         self._level = CeilingFan.HIGH
-        print self._location + " ceiling fan is on high"
+        print(self._location + " ceiling fan is on high")
 
     def medium(self):
         "turns the ceiling fan on to medium"
         self._level = CeilingFan.MEDIUM
-        print self._location + " ceiling fan is on medium"
+        print(self._location + " ceiling fan is on medium")
 
     def low(self):
         "turns the ceiling fan on to low"
         self._level = CeilingFan.LOW
-        print self._location + " ceiling fan is on low"
+        print(self._location + " ceiling fan is on low")
 
     def off(self):
         "turns the ceiling fan off"
         self._level = 0
-        print self._location + " ceiling fan is off"
+        print(self._location + " ceiling fan is off")
 
     def get_speed(self):
         return self._level
@@ -52,19 +52,19 @@ class GarageDoor:
         self._location = location
 
     def up(self):
-        print self._location + " garage Door is Up"
+        print(self._location + " garage Door is Up")
 
     def down(self):
-        print self._location + " garage Door is Down"
+        print(self._location + " garage Door is Down")
 
     def stop(self):
-        print self._location + " garage Door is Stopped"
+        print(self._location + " garage Door is Stopped")
 
     def light_on(self):
-        print self._location + " garage light is on"
+        print(self._location + " garage light is on")
 
     def light_off(self):
-        print self._location + " garage light is off"
+        print(self._location + " garage light is off")
 
 
 class Hottub:
@@ -81,30 +81,30 @@ class Hottub:
 
     def bubbles_on(self):
         if self._on is True:
-            print "Hottub is bubbling!"
+            print("Hottub is bubbling!")
     
     def bubbles_off(self):
         if self._on is True:
-            print "Hottub is not bubbling!"
+            print("Hottub is not bubbling!")
 
     def jets_on(self):
         if self._on is True:
-            print "Hottub jets are on"
+            print("Hottub jets are on")
 
     def jets_off(self):
         if self._on is True:
-            print "Hottub jets are off"
+            print("Hottub jets are off")
 
     def set_temperature(self, temperature):
         self._temperature = temperature
 
     def heat(self):
         self._temperature = 105
-        print "Hottub is heating to a steaming 105 degrees"
+        print("Hottub is heating to a steaming 105 degrees")
 
     def cool(self):
         self._temperature = 98
-        print "Hottub is cooling to 98 degrees"
+        print("Hottub is cooling to 98 degrees")
 
 
 class Light:
@@ -113,10 +113,10 @@ class Light:
         self._location = location
 
     def on(self):
-        print self._location + " light is on"
+        print(self._location + " light is on")
 
     def off(self):
-        print self._location + " light is off"
+        print(self._location + " light is off")
 
 class Stereo:
 
@@ -124,22 +124,22 @@ class Stereo:
         self._location = location
 
     def on(self):
-        print self._location + " stereo is on"
+        print(self._location + " stereo is on")
 
     def off(self):
-        print self._location + " stereo is off"
+        print(self._location + " stereo is off")
 
     def set_cd(self):
-        print self._location + " stereo is set for CD input"
+        print(self._location + " stereo is set for CD input")
 
     def set_dvd(self):
-        print self._location + " stereo is set for Radio"
+        print(self._location + " stereo is set for Radio")
 
     def set_volume(self, volume):
         """code to set the volume
         valid range: 1-11 (after all 11 is better than 10, right?)
         """
-        print self._location + " Stereo volume set to " + str(volume)
+        print(self._location + " Stereo volume set to " + str(volume))
 
 
 class TV:
@@ -149,14 +149,14 @@ class TV:
         self._channel = 0
 
     def on(self):
-        print "TV is on"
+        print("TV is on")
     
     def off(self):
-        print "TV is off"
+        print("TV is off")
 
     def set_input_channel(self):
         self._channel = 3
-        print "Channell is set for VCR"
+        print("Channell is set for VCR")
 
 
 ###############################################################################
@@ -345,7 +345,7 @@ if __name__ == '__main__':
     remote_control.set_command(2, ceiling_fan_on, ceiling_fan_off)
     remote_control.set_command(3, stereo_on_with_cd, stereo_off)
 
-    print str(remote_control)
+    print(str(remote_control))
 
     remote_control.on_button_was_pushed(0)
     remote_control.off_button_was_pushed(0)

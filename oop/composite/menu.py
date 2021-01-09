@@ -71,7 +71,7 @@ class Waitress:
         self.__all_menus = all_menus
 
     def print_menu(self):
-        print str(self.__all_menus)
+        print(str(self.__all_menus))
 
 
 class Menu(MenuComponent):

@@ -25,19 +25,19 @@ class CeilingFan:
 
     def high(self):
         self._speed = CeilingFan.HIGH
-        print self._location + " ceiling fan is on high"
+        print(self._location + " ceiling fan is on high")
 
     def medium(self):
         self._speed = CeilingFan.MEDIUM
-        print self._location + " ceiling fan is on medium"
+        print(self._location + " ceiling fan is on medium")
 
     def low(self):
         self._speed = CeilingFan.LOW
-        print self._location + " ceiling fan is on low"
+        print(self._location + " ceiling fan is on low")
 
     def off(self):
         self._speed = CeilingFan.OFF
-        print self._location + " ceiling fan is off"
+        print(self._location + " ceiling fan is off")
 
     def get_speed(self):
         return self._speed
@@ -50,18 +50,18 @@ class Light:
 
     def on(self):
         self._level = 100
-        print "Light is on"
+        print("Light is on")
 
     def off(self):
         self._level = 0
-        print "Light is off"
+        print("Light is off")
 
     def dim(self, level):
         self._level = level
         if self._level == 0:
             self.off()
         else:
-            print "Light is dimmed to " + str(self._level) + "%"
+            print("Light is dimmed to " + str(self._level) + "%")
 
     def get_level(self):
         return self._level
@@ -274,11 +274,11 @@ if __name__ == '__main__':
 
     remote_control.on_button_was_pushed(0)
     remote_control.off_button_was_pushed(0)
-    print str(remote_control)
+    print(str(remote_control))
     remote_control.undo_button_was_pushed()
     remote_control.off_button_was_pushed(0)
     remote_control.on_button_was_pushed(0)
-    print str(remote_control)
+    print(str(remote_control))
     remote_control.undo_button_was_pushed()
 
     ceiling_fan = CeilingFan("Living Room")
@@ -292,9 +292,9 @@ if __name__ == '__main__':
 
     remote_control.on_button_was_pushed(0)
     remote_control.off_button_was_pushed(0)
-    print str(remote_control)
+    print(str(remote_control))
     remote_control.undo_button_was_pushed()
 
     remote_control.on_button_was_pushed(1)
-    print str(remote_control)
+    print(str(remote_control))
     remote_control.undo_button_was_pushed()

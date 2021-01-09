@@ -14,31 +14,31 @@ class Amplifier:
         self._cd_player = None
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def set_stereo_sound(self):
-        print self._description + " stereo mode on"
+        print(self._description + " stereo mode on")
 
     def set_surround_sound(self):
         print(self._description + " surround sound on "
               "(5 speakers, 1 subwoofer)")
 
     def set_volume(self, level):
-        print self._description + " setting volume to " + str(level)
+        print(self._description + " setting volume to " + str(level))
 
     def set_tuner(self, tuner):
-        print self._description + " setting tuner to " + tuner
+        print(self._description + " setting tuner to " + tuner)
         self._tuner = tuner
 
     def set_dvd(self, dvd):
-        print self._description + " setting DVD player to " + str(dvd)
+        print(self._description + " setting DVD player to " + str(dvd))
         self._dvd_player = dvd
 
     def set_cd(self, cd):
-        print self._description + " setting CD player to " + cd
+        print(self._description + " setting CD player to " + cd)
         self._cd_player = cd
 
     def __str__(self):
@@ -54,19 +54,19 @@ class CdPlayer:
         self._title = None
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print((self._description + " off"))
 
     def eject(self):
         self._title = None
-        print self._description + " eject"
+        print((self._description + " eject"))
 
     def play_title(self, title):
         self._title = title
         self._current_track = 0
-        print self._description + ' playing "' + self._title + '"'
+        print(self._description + ' playing "' + self._title + '"')
 
     def play_track(self, track):
         if self._title is None:
@@ -74,17 +74,17 @@ class CdPlayer:
                   self._current_track + ", no cd inserted")
         else:
             self._current_track = track
-            print self._description + " playing track " + self._current_track
+            print(self._description + " playing track " + self._current_track)
 
     def stop(self):
         self._current_track = 0
-        print self._description + " stopped"
+        print(self._description + " stopped")
 
     def pause(self):
-        print self._description + ' paused "' + self._title + '"'
+        print(self._description + ' paused "' + self._title + '")')
 
     def __str__(self):
-        return self._description
+        return(self._description)
 
 
 class DvdPlayer:
@@ -96,18 +96,18 @@ class DvdPlayer:
         self._movie = None
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def eject(self):
-        print self._description + " eject"
+        print(self._description + " eject")
 
     def play_movie(self, movie):
         self._movie = movie
         self._current_track = 0
-        print self._description + ' playing "' + self._movie + '"'
+        print(self._description + ' playing "' + self._movie + '"')
 
     def play_track(self, track):
         if self._movie is None:
@@ -120,16 +120,16 @@ class DvdPlayer:
 
     def stop(self):
         self._current_track = 0
-        print self._description + ' stopped "' + self._movie + '"'
+        print(self._description + ' stopped "' + self._movie + '"')
 
     def pause(self):
-        print self._description + ' paused "' + self._movie + '"'
+        print(self._description + ' paused "' + self._movie + '"')
 
     def set_two_channel_audio(self):
-        print self._description + " set two channel audio"
+        print(self._description + " set two channel audio")
 
     def set_surround_audio(self):
-        print self._description + " set surround audio"
+        print(self._description + " set surround audio")
 
     def __str__(self):
         return self._description
@@ -148,7 +148,7 @@ class HomeTheatherFacade:
         self._popper = popper
 
     def watch_movie(self, movie):
-        print "Get ready to watch a movie..."
+        print("Get ready to watch a movie...")
 
         self._popper.on()
         self._popper.pop()
@@ -169,7 +169,7 @@ class HomeTheatherFacade:
         self._dvd.play_movie(movie)
 
     def end_movie(self):
-        print "Shutting movie theater down..."
+        print("Shutting movie theater down...")
 
         self._popper.off()
         self._lights.on()
@@ -181,7 +181,7 @@ class HomeTheatherFacade:
         self._dvd.off()
 
     def listen_to_cd(self, cd_title):
-        print "Get ready for an audiopile experence..."
+        print("Get ready for an audiopile experence...")
 
         self._lights.on()
         self._amp.on()
@@ -191,14 +191,14 @@ class HomeTheatherFacade:
         self._cd.play(cd_title)
 
     def end_cd(self):
-        print "Shutting down CD..."
+        print("Shutting down CD...")
         self._amp.off()
         self._amp.set_cd(self._cd)
         self._cd.eject()
         self._cd.off()
 
     def listen_to_radio(self, frequency):
-        print "Tuning in the airwaves..."
+        print("Tuning in the airwaves...")
 
         self._tuner.on()
         self._tuner.set_frequency(frequency)
@@ -207,7 +207,7 @@ class HomeTheatherFacade:
         self._amp.set_tuner(self._tuner)
 
     def end_radio(self):
-        print "Shutting down the tuner..."
+        print("Shutting down the tuner...")
         self._tuner.off()
         self._amp.off()
 
@@ -218,13 +218,13 @@ class PopcornPopper:
         self._description = description
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def pop(self):
-        print self._description + " popping popcorn!"
+        print(self._description + " popping popcorn!")
 
     def __str__(self):
         return self._description
@@ -237,16 +237,16 @@ class Projector:
         self._dvd_player = dvd_player
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def wide_screen_mode(self):
-        print self._description + " in widescreen mode (16x9 aspect ratio)"
+        print(self._description + " in widescreen mode (16x9 aspect ratio)")
 
     def tv_move(self):
-        print self._description + " in tv mode (4x3 aspect ratio)"
+        print(self._description + " in tv mode (4x3 aspect ratio)")
 
     def __str__(self):
         return self._description
@@ -258,10 +258,10 @@ class Screen:
         self._description = description
 
     def up(self):
-        print self._description + " going up"
+        print(self._description + " going up")
 
     def down(self):
-        print self._description + " going down"
+        print(self._description + " going down")
 
     def __str__(self):
         return self._description
@@ -273,16 +273,16 @@ class TheaterLights:
         self._description = description
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def dim(self, level):
-        print self._description + " dimming to " + str(level) + " %"
+        print(self._description + " dimming to " + str(level) + " %")
 
     def __str__(self):
-        return self._description
+        return(self._description)
 
 
 class Tuner:
@@ -293,20 +293,20 @@ class Tuner:
         self._amplifier = amplifier
 
     def on(self):
-        print self._description + " on"
+        print(self._description + " on")
 
     def off(self):
-        print self._description + " off"
+        print(self._description + " off")
 
     def set_frequency(self, frequency):
-        print self._description + " setting frequency to " + frequency
+        print(self._description + " setting frequency to " + frequency)
         self._frequency = frequency
 
     def set_am(self):
-        print self._description + " setting AM mode"
+        print(self._description + " setting AM mode")
 
     def set_fm(self):
-        print self._description + " setting FM mode"
+        print(self._description + " setting FM mode")
 
     def __str__(self):
         return self._description

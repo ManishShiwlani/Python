@@ -22,27 +22,27 @@ class Quackable:
 
 class DecoyDuck(Quackable):
     def quack(self):
-        print "<< Silence >>"
+        print ("<< Silence >>")
 
 
 class DuckCall(Quackable):
     def quack(self):
-        print "Kwak"
+        print ("Kwak")
 
 
 class MallardDuck(Quackable):
     def quack(self):
-        print "Quack"
+        print("Quack")
 
 
 class RedheadDuck(Quackable):
     def quack(self):
-        print "Quack"
+        print("Quack")
 
 
 class RubberDuck(Quackable):
     def quack(self):
-        print "Squeak"
+        print("Squeak")
 
 
 ###############################################################################
@@ -51,7 +51,7 @@ class RubberDuck(Quackable):
 
 class Goose:
     def honk(self):
-        print "Honk"
+        print("Honk")
 
 
 class GooseAdapter(Quackable):
@@ -98,7 +98,7 @@ class DuckSimulator:
         rubber_duck = QuackCounter(RubberDuck())
         goose_duck = QuackCounter(GooseAdapter(Goose()))
 
-        print "\nDuck Simulator: With Goose Decorator"
+        print("\nDuck Simulator: With Goose Decorator")
 
         self.simulate_duck(mallard_duck)
         self.simulate_duck(redhead_duck)
@@ -106,7 +106,7 @@ class DuckSimulator:
         self.simulate_duck(rubber_duck)
         self.simulate_duck(goose_duck)
 
-        print "The ducks quacked " + str(QuackCounter.get_quacks()) + " times"
+        print("The ducks quacked " + str(QuackCounter.get_quacks()) + " times")
 
     def simulate_duck(self, duck):
         duck.quack()

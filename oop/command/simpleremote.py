@@ -11,28 +11,28 @@ from abc import ABCMeta, abstractmethod
 class Light:
 
     def on(self):
-        print "Light is on"
+        print("Light is on")
 
     def off(self):
-        print "Light is off"
+        print("Light is off")
 
 
 class GarageDoor:
 
     def up(self):
-        print "Garage Door is Open" 
+        print("Garage Door is Open")
 
     def down(self):
-        print "Garage Door is Closed" 
+        print("Garage Door is Closed")
 
     def stop(self):
-        print "Garage Door is Stopped" 
+        print("Garage Door is Stopped")
 
     def light_on(self):
-        print "Garage light is on" 
+        print("Garage light is on")
 
     def light_off(self):
-        print "Garage light is off" 
+        print("Garage light is off")
 
 
 class Command:

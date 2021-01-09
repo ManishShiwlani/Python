@@ -4,7 +4,7 @@ Ducks problem with quack counts
 Author: m1ge7
 Date: 2014/03/22
 """
-
+from __future__ import print_function
 from abc import ABCMeta, abstractmethod
 
 
@@ -22,27 +22,27 @@ class Quackable:
 
 class DecoyDuck(Quackable):
     def quack(self):
-        print "<< Silence >>"
+        print("<< Silence >>")
 
 
 class DuckCall(Quackable):
     def quack(self):
-        print "Kwak"
+        print("Kwak")
 
 
 class MallardDuck(Quackable):
     def quack(self):
-        print "Quack"
+        print("Quack")
 
 
 class RedheadDuck(Quackable):
     def quack(self):
-        print "Quack"
+        print("Quack")
 
 
 class RubberDuck(Quackable):
     def quack(self):
-        print "Squeak"
+        print("Squeak")
 
 
 ###############################################################################
@@ -51,7 +51,7 @@ class RubberDuck(Quackable):
 
 class Goose:
     def honk(self):
-        print "Honk"
+        print("Honk")
 
 
 class GooseAdapter(Quackable):
@@ -151,7 +151,7 @@ class DuckSimulator:
         rubber_duck = duck_factory.create_rubber_duck()
         goose_duck = GooseAdapter(Goose())
 
-        print "\nDuck Simulator: With Abstract Factory"
+        print("\nDuck Simulator: With Abstract Factory")
 
         self.simulate_duck(mallard_duck)
         self.simulate_duck(redhead_duck)
@@ -159,7 +159,7 @@ class DuckSimulator:
         self.simulate_duck(rubber_duck)
         self.simulate_duck(goose_duck)
 
-        print "The ducks quacked " + str(QuackCounter.get_quacks()) + " times"
+        print("The ducks quacked " + str(QuackCounter.get_quacks()) + " times")
 
     def simulate_duck(self, duck):
         duck.quack()

@@ -246,13 +246,13 @@ class Pizza:
         pass
 
     def bake(self):
-        print "Bake for 25 minutes at 350"
+        print("Bake for 25 minutes at 350")
 
     def cut(self):
-        print "Cutting the pizza into diagonal slices"
+        print("Cutting the pizza into diagonal slices")
 
     def box(self):
-        print "Place pizza in official PizzaStore box"
+        print("Place pizza in official PizzaStore box")
 
     def set_name(self, name):
         self._name = name
@@ -292,7 +292,7 @@ class CheesePizza(Pizza):
         self._ingredient_factory = ingredient_factory
 
     def prepare(self):
-        print "Preparing " + self._name
+        print("Preparing " + self._name)
         self._dough = self._ingredient_factory.create_dough()
         self._sauce = self._ingredient_factory.create_sauce()
 
@@ -304,7 +304,7 @@ class ClamPizza(Pizza):
         self._ingredient_factory = ingredient_factory
 
     def prepare(self):
-        print "Preparing " + self._name
+        print("Preparing " + self._name)
 
         self._cheese = self._ingredient_factory.create_cheese()
         self._dough = self._ingredient_factory.create_dough()
@@ -320,7 +320,7 @@ class PepperoniPizza(Pizza):
         self._ingredient_factory = ingredient_factory
 
     def prepare(self):
-        print "Preparing " + self._name
+        print("Preparing " + self._name)
 
         self._dough = self._ingredient_factory.create_dough()
         self._sauce = self._ingredient_factory.create_sauce()
@@ -336,7 +336,7 @@ class VeggiePizza(Pizza):
         self._ingredient_factory = ingredient_factory
 
     def prepare(self):
-        print "Preparing " + self._name
+        print("Preparing " + self._name)
 
         self._dough = self._ingredient_factory.create_dough()
         self._sauce = self._ingredient_factory.create_sauce()
@@ -425,26 +425,26 @@ if __name__ == '__main__':
     chicagoStore = ChicagoPizzaStore()
 
     pizza = nyStore.order_pizza("cheese")
-    print "Ethan ordered a " + str(pizza) + "\n"
+    print("Ethan ordered a " + str(pizza) + "\n")
 
     pizza = chicagoStore.order_pizza("cheese")
-    print "Joel ordered a " + str(pizza) + "\n"
+    print("Joel ordered a " + str(pizza) + "\n")
 
     pizza = nyStore.order_pizza("clam")
-    print "Ethan ordered a " + str(pizza) + "\n"
+    print("Ethan ordered a " + str(pizza) + "\n")
 
     pizza = chicagoStore.order_pizza("clam")
-    print "Joel ordered a " + str(pizza) + "\n"
+    print("Joel ordered a " + str(pizza) + "\n")
 
     pizza = nyStore.order_pizza("pepperoni")
-    print "Ethan ordered a " + str(pizza) + "\n"
+    print("Ethan ordered a " + str(pizza) + "\n")
 
     pizza = chicagoStore.order_pizza("pepperoni")
-    print "Joel ordered a " + str(pizza) + "\n"
+    print("Joel ordered a " + str(pizza) + "\n")
 
     pizza = nyStore.order_pizza("veggie")
-    print "Ethan ordered a " + str(pizza) + "\n"
+    print("Ethan ordered a " + str(pizza) + "\n")
 
     pizza = chicagoStore.order_pizza("veggie")
-    print "Joel ordered a " + str(pizza) + "\n"
+    print("Joel ordered a " + str(pizza) + "\n")
 
